@@ -53,18 +53,50 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       .querySelector(this.getAttribute("href"))
       .scrollIntoView({ behavior: "smooth" });
     if (window.innerWidth <= 768) {
-      navLinks.classList.remove("active"); // Close menu on link click
+      navLinks.classList.remove("active");
       menuToggle.textContent = "☰";
     }
   });
 });
 
-// Parallax Effect on Hero
-const hero = document.querySelector(".hero-bg");
-window.addEventListener("scroll", () => {
+// Parallax Effect
+function updateParallax() {
   const scrollPosition = window.scrollY;
-  hero.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-});
+
+  // Hero background
+  const heroBg = document.querySelector(".hero-bg");
+  if (heroBg) {
+    heroBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+  }
+
+  // Section backgrounds
+  document.querySelectorAll(".section-bg").forEach((bg) => {
+    const section = bg.closest(".section");
+    const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+    const offset = (scrollPosition - sectionTop) * 0.3; // Slower parallax for sections
+    bg.style.transform = `translateY(${offset}px)`;
+  });
+
+  // Footer background
+  const footerBg = document.querySelector(".footer-bg");
+  if (footerBg) {
+    const footerTop =
+      footerBg.closest("footer").getBoundingClientRect().top + window.scrollY;
+    const footerOffset = (scrollPosition - footerTop) * 0.2;
+    footerBg.style.transform = `translateY(${footerOffset}px)`;
+  }
+}
+
+// Debounce function for performance
+const debounce = (func, wait) => {
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+};
+
+window.addEventListener("scroll", debounce(updateParallax, 16));
 
 // Intersection Observer for Animations
 const observer = new IntersectionObserver(
@@ -145,19 +177,16 @@ document.addEventListener("DOMContentLoaded", () => {
   showLoading();
   setTimeout(() => {
     hideLoading();
+    updateParallax(); // Initial parallax update
   }, 1000);
 });
-
-// Add this to your existing JS file
 
 // Toggle Financial Services Links
 const financialCard = document.getElementById("financial-services");
 const financialLinks = document.getElementById("financial-links");
 
 financialCard.addEventListener("click", (e) => {
-  // Prevent triggering if clicking the links themselves
   if (e.target.classList.contains("service-link-btn")) return;
-
   financialLinks.classList.toggle("active");
 });
 

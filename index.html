@@ -9,7 +9,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/gif" href="Digital Frien.gif">
   </head>
   <body>
     <div class="loading-overlay" id="loadingOverlay">
@@ -50,9 +49,10 @@
     <section id="home" class="hero">
       <div class="hero-content">
         <img
-          src="myphoto.png"
+          src="https://media.licdn.com/dms/image/v2/D5603AQElHqAPpfUWfw/profile-displayphoto-shrink_200_200/0/1702996917664?e=2147483647&v=beta&t=2WEIhfcoJJxjQNyP9J7Nu0ucatEph0ueFfd_NtiSr3Q"
           alt="Bishnu Prasad Sethi"
           class="profile-img"
+          loading="lazy"
         />
         <h1>Hi, I'm <span>Bishnu Prasad Sethi</span></h1>
         <p>Web Developer | UI/UX Enthusiast | Future Innovator</p>
@@ -63,10 +63,11 @@
           Hire Me
         </button>
       </div>
-      <div class="hero-bg"></div>
+      <div class="hero-bg parallax-bg"></div>
     </section>
 
     <section id="about" class="section">
+      <div class="section-bg parallax-bg"></div>
       <h2>About Me</h2>
       <div class="about-content">
         <p>
@@ -78,6 +79,7 @@
     </section>
 
     <section id="projects" class="section">
+      <div class="section-bg parallax-bg"></div>
       <h2>Projects</h2>
       <div class="project-grid">
         <div class="project-card">
@@ -99,6 +101,7 @@
     </section>
 
     <section id="services" class="section">
+      <div class="section-bg parallax-bg"></div>
       <h2>Services</h2>
       <div class="services-container">
         <div class="services-grid">
@@ -110,7 +113,6 @@
             </p>
           </div>
 
-          <!-- Inside the .services-grid section -->
           <div class="service-card" id="financial-services">
             <h3>Financial Services</h3>
             <p>
@@ -150,8 +152,8 @@
           <div class="service-card" data-service="research">
             <h3>Real Estate Data Research & Analysis</h3>
             <p>
-              In-depth research and analysis reports for actionable real estate
-              insights.
+              In-depth research and analysis reports for actionable Godzilla
+              estate insights.
             </p>
           </div>
         </div>
@@ -160,6 +162,7 @@
     </section>
 
     <section id="blogs" class="section">
+      <div class="section-bg parallax-bg"></div>
       <h2>Blogs</h2>
       <div class="blog-grid">
         <div class="blog-card">
@@ -181,17 +184,18 @@
     </section>
 
     <section id="contact" class="section">
+      <div class="section-bg parallax-bg"></div>
       <h2>Contact Me</h2>
-      <form class="contact-form" https://formspree.io/f/maneblgb>
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Message" required></textarea>
+      <form class="contact-form" action="" method="POST">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Message" required></textarea>
         <button type="submit" class="submit-btn">Send Message</button>
       </form>
     </section>
 
     <footer>
-      <div class="footer-bg"></div>
+      <div class="footer-bg parallax-bg"></div>
       <div class="footer-container">
         <div class="footer-section about">
           <h3>About Me</h3>

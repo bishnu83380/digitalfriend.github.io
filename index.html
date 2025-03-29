@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Partner</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="spinner"></div>
+    </div>
+
+    <div class="cursor"></div>
+    <header>
+      <div class="logo">
+        Website Partner<br />
+        <p style="font-size: 12px">Your Friend in the Digital World</p>
+      </div>
+      <span class="menu-toggle" aria-label="Toggle navigation menu">☰</span>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a href="#home"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="#about"><i class="fas fa-user"></i> About</a>
+          </li>
+          <li>
+            <a href="#projects"><i class="fas fa-folder"></i> Projects</a>
+          </li>
+          <li>
+            <a href="#services"><i class="fas fa-cogs"></i> Services</a>
+          </li>
+          <li>
+            <a href="#blogs"><i class="fas fa-blog"></i> Blogs</a>
+          </li>
+          <li>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <img
+          src="myphoto.png"
+          alt="Bishnu Prasad Sethi"
+          class="profile-img"
+        />
+        <h1>Hi, I'm <span>Bishnu Prasad Sethi</span></h1>
+        <p>Web Developer | UI/UX Enthusiast | Future Innovator</p>
+        <button class="cta-btn" role="button" aria-label="Explore my work">
+          Explore My Work
+        </button>
+        <button class="cta-btn" role="button" aria-label="Hire me">
+          Hire Me
+        </button>
+      </div>
+      <div class="hero-bg"></div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>
+          I'm a passionate web developer with a knack for creating futuristic
+          and user-friendly interfaces. With expertise in HTML, CSS, and
+          JavaScript, I bring ideas to life.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="card-overlay"></div>
+          <h3>Project 1</h3>
+          <p>A futuristic e-commerce platform.</p>
+        </div>
+        <div class="project-card">
+          <div class="card-overlay"></div>
+          <h3>Project 2</h3>
+          <p>Interactive portfolio with 3D effects.</p>
+        </div>
+        <div class="project-card">
+          <div class="card-overlay"></div>
+          <h3>Project 3</h3>
+          <p>AI-driven dashboard UI.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <h2>Services</h2>
+      <div class="services-container">
+        <div class="services-grid">
+          <div class="service-card" data-service="web">
+            <h3>Web Design & Development</h3>
+            <p>
+              Crafting modern, responsive websites and robust web applications
+              tailored to your vision.
+            </p>
+          </div>
+
+          <!-- Inside the .services-grid section -->
+          <div class="service-card" id="financial-services">
+            <h3>Financial Services</h3>
+            <p>
+              Explore financial solutions to grow your wealth and secure your
+              future.
+            </p>
+            <div class="service-links" id="financial-links">
+              <a
+                href="https://sales.gromo.in/gp-website/g/-UuTASzNeGVcANpyo0aHi"
+                target="_blank"
+                class="service-link-btn"
+                >Find your best insurance plan</a
+              >
+              <a
+                href="https://leads.banksathi.com/atom/?h=OGdGdGplKzJOTi96MVlaK2VMVHBpbGVzeS9DZE1JYkhnTTBlOFpqY2Zxbz0="
+                target="_blank"
+                class="service-link-btn"
+                >Find your best credit card</a
+              >
+            </div>
+          </div>
+
+          <div class="service-card" data-service="video">
+            <h3>Video Editing (Real Estate)</h3>
+            <p>
+              Professional video editing for real estate advertisements to
+              showcase properties effectively.
+            </p>
+          </div>
+          <div class="service-card" data-service="investment">
+            <h3>Real Estate Investment Reports</h3>
+            <p>
+              Detailed reports to guide your real estate investment decisions
+              with confidence.
+            </p>
+          </div>
+          <div class="service-card" data-service="research">
+            <h3>Real Estate Data Research & Analysis</h3>
+            <p>
+              In-depth research and analysis reports for actionable real estate
+              insights.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="cta-btn" id="requestServiceBtn">Request a Service</button>
+    </section>
+
+    <section id="blogs" class="section">
+      <h2>Blogs</h2>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <h3>Blog Post 1</h3>
+          <p>Exploring the future of web development with AI.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="blog-card">
+          <h3>Blog Post 2</h3>
+          <p>Tips for creating stunning UI/UX designs.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="blog-card">
+          <h3>Blog Post 3</h3>
+          <p>How to optimize your website for performance.</p>
+          <a href="#" class="read-more">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+      <form class="contact-form" https://formspree.io/f/maneblgb>
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <div class="footer-bg"></div>
+      <div class="footer-container">
+        <div class="footer-section about">
+          <h3>About Me</h3>
+          <p>
+            Passionate web developer creating futuristic digital experiences.
+            Specializing in modern UI/UX design and innovative web solutions.
+          </p>
+          <div class="social-links">
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section quick-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li style="--i: 1"><a href="#home">Home</a></li>
+            <li style="--i: 2"><a href="#about">About</a></li>
+            <li style="--i: 3"><a href="#projects">Projects</a></li>
+            <li style="--i: 4"><a href="#blogs">Blogs</a></li>
+            <li style="--i: 5"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section newsletter">
+          <h3>Newsletter</h3>
+          <p>Stay updated with my latest projects and insights</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Bishnu Prasad Sethi | Designed & Developed with Passion</p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
